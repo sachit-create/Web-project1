@@ -27,7 +27,7 @@ function speak(text) {
 
 // Ensure voices are loaded properly on mobile
 window.speechSynthesis.onvoiceschanged = () => {
-    speak("Voice settings applied.");
+    speak(wish_me());
 };
 
 function wish_me() {
