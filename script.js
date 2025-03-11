@@ -11,7 +11,6 @@ function speak(text) {
     text_speak.volume = 1; // Volume level
     text_speak.lang = "en-US"; // Setting language to English (US)
 
-    // Select a specific voice (optional)
     let voices = window.speechSynthesis.getVoices();
     text_speak.voice = voices.find(voice => voice.name.includes("Google") || voice.name.includes("Microsoft")) || voices[0];
 
