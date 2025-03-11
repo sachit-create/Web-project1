@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+}
+
+#voice-box {
+    width: 150px;
+    height: 80px;
+    background: linear-gradient(45deg, cyan, blue);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: perspective(500px) rotateX(15deg);
+}
+
+.wave {
+    display: flex;
+    gap: 6px;
+}
+
+.wave span {
+    width: 6px;
+    height: 20px;
+    background: white;
+    border-radius: 10px;
+    animation: waveAnim 1s infinite ease-in-out;
+}
+
+.wave span:nth-child(1) { animation-delay: 0s; }
+.wave span:nth-child(2) { animation-delay: 0.2s; }
+.wave span:nth-child(3) { animation-delay: 0.4s; }
+.wave span:nth-child(4) { animation-delay: 0.6s; }
+.wave span:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes waveAnim {
+    0%, 100% { height: 10px; background: cyan; }
+    50% { height: 30px; background: white; }
+}
+
+#logo{
+    width: 30vw;
+}
+
+h1{
+    color: aliceblue;
+    font-family: "Poppins", sans-serif;
+}
+
+#name{
+    color: #2600ff;
+    font-size: 40px;
+}
+
+#va{
+    color: rgb(255, 155, 4);
+    font-size: 40px;
+}
+
+#btn{
+    width: 30%;
+    background:linear-gradient(to right,rgb(10, 7, 218),rgb(255, 251, 0));
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 25px;
+    color: aliceblue;
+    box-shadow: 2px 2px 10px rgb(10, 7, 218),2px 2px 10px rgb(255, 251, 0);
+    border: none;
+    transition: all 0.5s;
+}
+
+#btn:hover{
+    box-shadow: 2px 2px 20px rgb(10, 7, 218),2px 2px 20px rgb(255, 251, 0);
+    letter-spacing: 0.5px;
+}
